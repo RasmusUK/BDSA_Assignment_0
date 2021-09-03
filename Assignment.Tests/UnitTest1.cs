@@ -7,18 +7,6 @@ namespace Assignment.Tests
     public class ProgramTests
     {
         [Fact]
-        public void Main_prints_Hello_World()
-        {
-            var writer = new StringWriter();
-            Console.SetOut(writer);
-
-            Program.Main(new string[0]);
-            var output = writer.GetStringBuilder().ToString().Trim();
-
-            Assert.Equal("Hello World!", output);
-        }
-
-        [Fact]
         public void IsLeapYearThenTrue()
         {
             var notDivisibleByFour = Program.IsLeapYear(2001);
@@ -30,6 +18,22 @@ namespace Assignment.Tests
             Assert.True(divisibleByFour);
             Assert.True(divisibleByFourAndHundred);
             Assert.False(divisibleByFourAndNotHundred);
+        }
+
+        [Fact]
+        public void UserInputWriteYay()
+        {
+            var actual = Program.GetLeapYearResponse("2004");
+            
+            Assert.Equal("yay", actual);
+        }
+
+        [Fact]
+        public void UserInputWriteNay()
+        {
+            var actual = Program.GetLeapYearResponse("2001");
+
+            Assert.Equal("nay", actual);
         }
     }
 }
