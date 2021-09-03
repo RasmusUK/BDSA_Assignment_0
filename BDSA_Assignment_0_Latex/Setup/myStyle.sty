@@ -1,0 +1,115 @@
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}			%1" margin hele vejen rundt
+\usepackage{graphicx}					%til at sætte billeder ind
+\usepackage[document]{ragged2e}			%Word-agtig opsætning af tekst
+			%dansk sprog
+\usepackage[hidelinks]{hyperref}			%klickbar indh.fort.
+\usepackage{lastpage}					%sideopsætning
+\usepackage{fancyhdr}					%sideopsætning
+\pagestyle{fancy}						%sideopsætning
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\baselinestretch}{1.25}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{array}
+\usepackage{url}
+\usepackage[danish]{babel}
+\rhead{}						%sideopsætning
+\lhead{}					%sideopsætning
+\chead{}							%sideopsætning
+\fancyfoot[C]{\thepage}						%sideopsætning
+\fancyfoot[R]{}		%side x af y
+\fancyfoot[L]{}
+\mathcode`\*="8000
+{\catcode`\*\active\gdef*{\cdot}}
+\setlength\parindent{0pt}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\newcommand{\charactercount}[1]{
+\immediate\write18{
+    expr `texcount -1 -sum -merge #1.tex` + `texcount -1 -sum -merge -char #1.tex` - 1 
+    > chars.txt
+}\input{chars.txt}}
+
+
+\usepackage[danish]{isodate}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage[]{mathtools}    %Mathtools
+\usepackage{siunitx}        %SI-enheder
+\usepackage{amssymb}        %Math-symboler
+\usepackage{graphicx}       %Various graphics
+\usepackage{float}          %Tilføjer tynd kant rundt om figurer
+   
+
+
+\usepackage{tikz}                   %Karnaugh-kort
+    \usetikzlibrary{calc}
+    \usetikzlibrary{positioning}
+    \usetikzlibrary{matrix}
+
+        \pgfdeclarelayer{background}
+        \pgfsetlayers{background,main}
+
+\usepackage{karnaugh-map}
+\usepackage{framed}
+
+\usepackage{textcomp}
+\usepackage{mathcomp}
+
+\usepackage{stmaryrd}
+
+
+\allowdisplaybreaks[1]
+
+%\graphicspath{./pics/}  %Placerer alle billeder i mappen "Pics"
+
+
+\numberwithin{equation}{section}     %Lad formelnummer følge sektionsnummer
+
+\def\doubleunderline#1{\underline{\underline{#1}}}
+\usepackage[numbib]{tocbibind}
+
+\usepackage{csquotes}
+
+\usepackage[style=authoryear-ibid,backend=biber]{biblatex}
+
+\addbibresource{Litteratur/Litteratur.bib}
+\usepackage{multirow}
+
+
+
+\usepackage{xcolor}
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\usepackage{listings}
+
+\lstdefinestyle{mystyle}
+{
+  language = Java,
+  showtabs=false,
+  morecomment=[s][\color{orange}]{@}{\ },
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=false,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  captionpos=b, 
+  numbers=left,                    
+  numbersep=5pt,
+  basicstyle=\ttfamily,
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
