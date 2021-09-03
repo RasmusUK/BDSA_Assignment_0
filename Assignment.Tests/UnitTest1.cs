@@ -17,19 +17,5 @@ namespace Assignment.Tests
 
             Assert.Equal("Hello World!", output);
         }
-
-        [Fact]
-        public void IsLeapYearThenTrue()
-        {
-            var notDivisibleByFour = Program.IsLeapYear(2001);
-            var divisibleByFour = Program.IsLeapYear(2004);
-            var divisibleByFourAndHundred = Program.IsLeapYear(1600);
-            var divisibleByFourAndNotHundred = Program.IsLeapYear(1700);
-
-            Assert.False(notDivisibleByFour);
-            Assert.True(divisibleByFour);
-            Assert.True(divisibleByFourAndHundred);
-            Assert.False(divisibleByFourAndNotHundred);
-        }
     }
 }
