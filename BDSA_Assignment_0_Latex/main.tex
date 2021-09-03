@@ -1,0 +1,25 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{Setup/myStyle}
+\begin{document}
+\input{Setup/ForsideOgSetup.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	{\scshape\Large\bfseries \textcolor{black}{Exercise 9}\par}
+	\vspace{1pt} {\large \textbf{IsLeapYear algorithm}\par}
+\end{center}
+\justifying
+
+\subsubsection*{Leap year algorithm explained}
+Figure \ref{fig:FlowLeapYear} shows a flowchart of the algorithm. It starts with the user input and then goes through a maximum of three if statements to test whether or not it is a leap year. It starts by evaluating if the input is lower than 1582 because then it is not a leap year and it returns false. If it is greater then it might be a leap year and it continues to evaluate if it is divisible by 100 and 400. If yes then it is a leap year and it returns true. If not then it can still be a leap year of it is divisible by 4 and not 100 and will then return true otherwise false and the algorithm is done.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=15cm]{Exercise 8.png}
+    \caption{Flowchart of IsLeapYear algorithm}
+    \label{fig:FlowLeapYear}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
